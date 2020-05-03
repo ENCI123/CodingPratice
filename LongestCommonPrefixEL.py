@@ -6,7 +6,8 @@ class Solution:
         reference = strs[0]
         result = ""
         for i in range(len(strs)-1):
-            i = i+1
+        for i in range(1,len(strs)-1):
+            
             if(len(reference) <= len(strs[i])):
                 ind = len(reference)
             else:
