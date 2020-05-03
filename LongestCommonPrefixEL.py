@@ -7,7 +7,7 @@ class Solution:
         result = ""
         for i in range(len(strs)-1):
         for i in range(1,len(strs)-1):
-            
+            CommonPrefix  = ""
             if(len(reference) <= len(strs[i])):
                 ind = len(reference)
             else:
@@ -16,7 +16,8 @@ class Solution:
                 if reference[j] == strs[i][j]:
                     CommonPrefix =  CommonPrefix+reference[j]
                     
-                
+                elif reference[j] != sts[i][j]:
+                    break
             reference = CommonPrefix
             
         return reference
