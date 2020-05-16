@@ -10,13 +10,5 @@ class Solution(object):
             if strs.isalnum():
                 result = result + strs.lower()
         
-        comparison = ""
-        i = len(result)-1
-        while(i>=0):
-            comparison = comparison + result[i]
-            i = i-1
-            
-        if result == comparison:
-            return True
-        else:
-            return False
+        return result == result[::-1]  
+        
